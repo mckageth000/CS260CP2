@@ -30,7 +30,15 @@ document.getElementById("programming").addEventListener("click",function(event){
       return response.json();
     }).then(function(json){
       console.log(json);
-      document.getElementById("response-body").innerHTML = json.joke;
+      let joke = "";
+      if (json.type === "twopart"){
+        joke += (json.setup + "<br>");
+        joke += json.delivery;
+      }
+      else if (json.type === "single"){
+        joke += json.joke;
+      }
+      document.getElementById("response-body").innerHTML = joke;
     })
 })
 
