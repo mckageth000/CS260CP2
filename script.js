@@ -34,14 +34,22 @@ document.getElementById("programming").addEventListener("click",function(event){
     })
 })
 
-document.getElementById("yomamma").addEventListener("click",function(event){
+document.getElementById("misc").addEventListener("click",function(event){
   //debugger
   event.preventDefault();
-  fetch("https://yomomma-api.herokuapp.com/jokes")
+  fetch("https://v2.jokeapi.dev/joke/Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit")
     .then(function(response){
       return response.json();
     }).then(function(json){
       console.log(json);
-      document.getElementById("response-body").innerHTML = json.joke;
+      let joke = "";
+      if (json.type === "twopart"){
+        joke += (json.setup + "<br>");
+        joke += json.delivery;
+      }
+      else if (json.type === "single"){
+        joke += json.joke;
+      }
+      document.getElementById("response-body").innerHTML = joke;
     })
 })
