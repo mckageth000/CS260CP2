@@ -58,6 +58,26 @@ h1{
   flex-direction: column-reverse;
 }
 
+#footer{
+  margin-top: 4px;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding-top: 4px;
+}
+
+a:link,
+a:active,
+a:visited{
+  text-decoration: none;
+  color: #ffdd00
+}
+
+a:hover{
+  color: orange;
+}
+
 @media only screen and (min-width: 961px){
   h1{
     font-size: 60px;

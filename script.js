@@ -17,6 +17,7 @@ document.getElementById("chucknorris").addEventListener("click",function(event){
           return response.json();
         }).then(function(json){
           console.log(json);
+          document.getElementById("footer").style = "display: flex;";
           document.getElementById("response-body").innerHTML += "<div class='joke'>" + json.value + "</div>";
         });
     });
@@ -38,6 +39,7 @@ document.getElementById("programming").addEventListener("click",function(event){
       else if (json.type === "single"){
         joke += json.joke;
       }
+      document.getElementById("footer").style = "display: flex;";
       document.getElementById("response-body").innerHTML += "<div class='joke'>" + joke + "</div>";
     })
 })
@@ -58,6 +60,7 @@ document.getElementById("misc").addEventListener("click",function(event){
       else if (json.type === "single"){
         joke += json.joke;
       }
+      document.getElementById("footer").style = "display: flex;";
       document.getElementById("response-body").innerHTML += "<div class='joke'>" + joke + "</div>";
     })
 })
