@@ -9,6 +9,8 @@ document.getElementById("chucknorris").addEventListener("click",function(event){
     }).then(function(json){
       categories = json;
       categories[4] = "dev";
+      categories[11] = "sport"
+      categories[12] = "money"
       let index = Math.floor(Math.random() * 16);
       let myCategory = categories[index];
       const url2 = "https://api.chucknorris.io/jokes/random?category=" + myCategory;
