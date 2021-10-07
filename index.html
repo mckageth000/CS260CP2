@@ -10,12 +10,18 @@
     <title>Joke Central</title>
     <link rel="stylesheet" href="/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <input id="chucknorris" type="button" value="Chuck Norris"></input>
-    <input id="programming" type="button" value="Programming"></input>
-    <input id="misc" type="button" value="Misc"></input>
+    <h1>Choose a joke type:</h1>
+    <div id='buttons'>
+    <input class='button' id="chucknorris" type="button" value="Chuck Norris"></input>
+    <input class='button' id="programming" type="button" value="Programming"></input>
+    <input class='button' id="misc" type="button" value="Misc"></input>
+    </div>
 
     <div id="response-body"></div>
     <script text="type/javascript" src="/script.js"></script>
